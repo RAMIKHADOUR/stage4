@@ -14,20 +14,25 @@
         <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
         {% block stylesheets %}{% endblock %}
 <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('assets/css/home.css')}}">
 
 
 <!-- Fichiers JS -->
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" defer></script>
 {% block javascripts %}{% endblock %}
 <script src="{{asset('assets/js/scripts.js')}}" defer></script>
-       
+
     </head>
     <body>
-        
-    
-       
-        {% block body %}
+        {% block navbar %}
+        {% include 'partials/_header.html.twig' %}
         {% endblock %}
-
+        <br><br>
+        {% block body %}{% endblock %}
+<br><br>
+        {% block footer %}
+        {% include 'partials/_footer.html.twig' %}
+        {% endblock %}
+    
     </body>
 </html>
